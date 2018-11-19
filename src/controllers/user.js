@@ -6,9 +6,9 @@ module.exports.logout = (req, res) => {
 };
 
 module.exports.loginForm = (req, res) => {
-    if (!req.user)
-        res.send('LOGIN FORM');
-    res.send(req.user);    
+    res.render('login', {
+        user : req.user
+    });
 };
 
 module.exports.registrationForm = (req, res) => {
